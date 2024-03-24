@@ -3080,9 +3080,10 @@ button.swiper-pagination-bullet {
     margin-bottom: 0;
     font-weight: 400 !important
 }
-
+/*修改信息框底部留白*/
 .widget.profile .level:not(:first-child):not(:empty) {
-    margin-top: 1.5rem
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .widget.profile .level .button i {
