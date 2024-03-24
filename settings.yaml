@@ -539,6 +539,8 @@ spec:
               options:
                 - value: 'profile'
                   label:  信息模块
+                - value: 'dongtai'
+                  label:  动态
                 - value: 'toc'
                   label:  目录模块
                 - value: 'notice'
@@ -664,6 +666,14 @@ spec:
           label: 侧边栏公告-博客公告
           placeholder: 请输入公告内容
           help: 公告内容支持 HTML 标签。
+        
+        - $formkit: textarea
+          name: dongtai_content
+          label: 侧边栏-更新日志
+          placeholder: 请输入更新的内容
+          help: 更新日志内容支持 HTML 标签。
+
+
         - $formkit: radio
           name: notice_show_mode
           label:  侧边栏公告-显示模式
