@@ -2,7 +2,7 @@
      th:fragment="widget (hide)"
      th:class="'card widget notice ' + ${hide} + ' is-hidden-all'">
     <div class="card-title">
-        <i class="ri-volume-up-line card-title-label"></i><span>更新日志</span>
+        <i class="ri-volume-up-line card-title-label"></i><span>韩服-夏季更新日程</span>
     </div>
     <div class="card-content">
         <div th:utext="${#strings.isEmpty(theme.config.sidebar.dongtai_content)? '<p>&emsp;&emsp;欢迎来访' + site.title + '，还没有发布任何更新内容！</p>' : theme.config.sidebar.dongtai_content}"></div>
