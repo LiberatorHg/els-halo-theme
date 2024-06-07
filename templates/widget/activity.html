@@ -1,0 +1,14 @@
+<div xmlns:th="https://www.thymeleaf.org"
+     th:fragment="widget (hide)"
+     th:class="'card widget notice ' + ${hide} + ' is-hidden-all'">
+    <div class="card-title">
+        <i class="ri-calendar-event-line card-title-label"></i><span>活动倒计时列表</span>
+    </div>
+    <div class="card-content">
+        <div th:each="activities, state : ${theme.config.bingyu.activity}">
+                <p>★&emsp;<strong th:text="${activities.act_name}">活动标题</strong></p>
+                <p>截止日期：<span th:text="${activities.end_time}">截止日期</span></p>
+                <p th:if="${!state.last}"><br></p>
+        </div>
+    </div>
+</div>

@@ -4,6 +4,26 @@ metadata:
   name: theme-dream-setting
 spec:
   forms:
+    - group: bingyu
+      label: '图书馆定制'
+      formSchema:
+        - $formkit: repeater
+          name: activity
+          label: 活动倒计时展示
+          value:
+            - act_name: 活动标题
+
+              end_time: 活动截止日期
+          children:
+            - $formkit: text
+              name: act_name
+              lable: 活动标题
+              placeholder: 请输入活动标题
+            - $formkit: text
+              name: end_time
+              lable: 活动截止日期
+              placeholder: 请输入请输入活动截止日期
+
     - group: basic_info
       label: '基础信息'
       formSchema:
@@ -537,6 +557,8 @@ spec:
               label: 模块类型
               value: "profile"
               options:
+                - value: 'activity'
+                  label: 活动倒计时模块
                 - value: 'profile'
                   label:  信息模块
                 - value: 'dongtai'

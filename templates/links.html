@@ -8,7 +8,7 @@
             <div th:if="${!#strings.isEmpty(theme.config.page_config.links_thumbnail)}" class="card-image cover-image" th:style="'background-image: url(' + ${theme.config.page_config.links_thumbnail} + ')'">
             </div>
             <div class="card-content main">
-                <h1 class="title" th:text="'友情链接 - ' + ${contributor.displayName} + '的小伙伴们'"></h1>
+                <h1 class="title" th:text="'拜德传送枢纽'"></h1>
                 <div class="main-content">
                     <th:block th:each="group : ${groups}">
                         <div th:if="${!#lists.isEmpty(group.links)}" class="links">

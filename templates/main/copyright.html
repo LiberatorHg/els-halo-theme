@@ -5,10 +5,6 @@
     </div>
     <div class="copyright-meta level">
         <div class="level-item">
-            <h6>作者</h6>
-            <p th:text="${post.owner.displayName}"></p>
-        </div>
-        <div class="level-item">
             <h6>发布于</h6>
             <p th:text="${#dates.format(post.spec.publishTime,'yyyy-MM-dd')}"></p>
         </div>

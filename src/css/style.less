@@ -30,6 +30,29 @@ body > .footer, body > .navbar, body > .section {
   transform: translateY(-100%);
 }
 
+.navbar-above .navbar-console {
+  float: right;
+  margin-left: 5px;
+  background: var(--theme);
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar-above .navbar-console>i {
+  font-size: 18px;
+  color: #fff;
+}
+
 .load-block {
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
@@ -3962,10 +3985,10 @@ button.swiper-pagination-bullet {
     .navbar-searchicon {
       display: block;
     }
-
-    .navbar-search {
-      display: none;
-    }
+  // 1023分辨率依旧显示搜索栏
+    //.navbar-search {
+    //  display: none;
+    //}
   }
 }
 
