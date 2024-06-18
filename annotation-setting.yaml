@@ -22,7 +22,7 @@ spec:
     - $formkit: select
       name: thumbnail_mode
       label: 文章列表缩略图模式
-      value: ""
+      value: default
       help: '文章在列表的缩略图模式，除网格布局外，当前配置将覆盖主题中的默认配置。'
       options:
         - value: default
