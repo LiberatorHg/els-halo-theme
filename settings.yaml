@@ -11,18 +11,21 @@ spec:
           name: activity
           label: 活动倒计时展示
           value:
-            - act_name: 活动标题
-
-              end_time: 活动截止日期
+            - end_time: 活动截止日期
+              act_list: 活动列表
           children:
             - $formkit: text
-              name: act_name
-              lable: 活动标题
-              placeholder: 请输入活动标题
-            - $formkit: text
               name: end_time
-              lable: 活动截止日期
-              placeholder: 请输入请输入活动截止日期
+              label: 活动截止日期
+              placeholder: 截止日期之前活动内容有
+            - $formkit: repeater
+              name: act_list
+              label: 活动列表
+              children:
+                - $formkit: text
+                  name: activity_name
+                  label: 活动
+                  placeholder: 截止日期之前活动内容有
 
     - group: basic_info
       label: '基础信息'

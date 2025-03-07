@@ -5,10 +5,20 @@
         <i class="ri-calendar-event-line card-title-label"></i><span>活动倒计时列表</span>
     </div>
     <div class="card-content">
-        <div th:each="activities, state : ${theme.config.bingyu.activity}">
-                <p>★&emsp;<strong th:text="${activities.act_name}">活动标题</strong></p>
-                <p>截止日期：<span th:text="${activities.end_time}">截止日期</span></p>
-                <p th:if="${!state.last}"><br></p>
+
+        <div th:each="activities_data : ${theme.config.bingyu.activity}">
+            <!--遍历日期-->
+             <strong><p class="act_list">截止日期：<span th:text="${activities_data.end_time}"></span></p></strong>
+
+            <!-- 使用 th:classappend 来根据条件添加 'date-close' 类 -->
+
+            <!--遍历日期下的活动-->
+            <div th:each="activities : ${activities_data.act_list}">
+                <p>★ <span th:text="${activities.activity_name}"></span></p>
+            </div>
+            <!-- 插入一个空行 -->
+            <br/>
         </div>
+
     </div>
 </div>
